@@ -22,7 +22,7 @@ public class base {
 		driver.manage().window().maximize();
 		
 		//expected Array
-		String [] itemsNeeded= {"Cucumber","Brocolli","Beetroot"};
+		String [] itemsNeeded= {"Cucumber","Brocolli","Beetroot","Carrot"};
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
 		
 		List<WebElement> products= driver.findElements(By.cssSelector("h4.product-name"));
@@ -40,12 +40,17 @@ public class base {
 		if(itemsNeededList.contains(formattedName)) {
 		j++;
 			//Click on AddToChart
-		driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
-		if(j==3) {
+		driver.findElements(By.xpath("//div[@class='product-action']")).get(i).click();
+		if(j==itemsNeeded.length) {
 			break;
 		}
 		}
+		System.out.println("Cart Added is "+i);
 		}
-	driver.close();	
+	//driver.close();	
 	}
 }
+
+
+
+//Amazon Interview question how to add items to cart from array 
