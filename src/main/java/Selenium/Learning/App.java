@@ -17,7 +17,6 @@ public class App
 	{
 
 		WebDriverManager.chromedriver().setup();
-	//	WebDriverWait wait;
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.youtube.com/");
 		System.out.println( "Hello World!" );
