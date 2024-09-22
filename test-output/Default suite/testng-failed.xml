@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium.Learning.App2">
+      <class name="com.learn.Section8.base">
         <methods>
           <include name="test1"/>
         </methods>
-      </class> <!-- Selenium.Learning.App2 -->
+      </class> <!-- com.learn.Section8.base -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
