@@ -38,12 +38,10 @@ public class base {
 		driver.findElement(By.xpath("//img[@alt=\"Cart\"]")).click();
 		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
 		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
-//        WebDriverWait w=new WebDriverWait(driver, Duration.ofSeconds(5));
+//      WebDriverWait w=new WebDriverWait(driver, Duration.ofSeconds(5));
 //		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class=\"promoBtn\"]")));
 		driver.findElement(By.xpath("//button[@class=\"promoBtn\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/button ")).click();
-		
-		
 	}
 	
 	
@@ -54,6 +52,7 @@ public class base {
 	
 	
 	public static void addItems(WebDriver driver,String [] itemsNeeded) {
+		
 		List<WebElement> products= driver.findElements(By.cssSelector("h4.product-name"));
 		int j=0;
 		for(int i=0;i<products.size();i++) {
@@ -61,9 +60,7 @@ public class base {
 		String[] name=products.get(i).getText().split("-");
 		String formattedName=name[0].trim();
 		//format name to get actual vegetable easy search 
-		
 		//check if name extracted is present in array of nor
-		
 		//convert array to arraylist for easy search
 		List<String> itemsNeededList=Arrays.asList(itemsNeeded);
 		if(itemsNeededList.contains(formattedName)) {
