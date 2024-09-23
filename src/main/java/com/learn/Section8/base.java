@@ -81,7 +81,6 @@ public class base {
 		Wait<WebDriver>wait= new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(3)).ignoring(NoSuchElementException.class);
 		WebElement foo= wait.until(new Function<WebDriver, WebElement>() {
 
-			@Override
 			public WebElement apply(WebDriver driver) {
 				if(driver.findElement(By.cssSelector("[id='finish] h4")).isDisplayed()) {
 					return driver.findElement(By.cssSelector("[id='finish] h4"));
