@@ -27,5 +27,8 @@ public class actions {
 		WebElement search=driver.findElement(By.id("twotabsearchtextbox"));
 		a.moveToElement(search).click().keyDown(Keys.SHIFT).sendKeys("hello").build().perform();
 		a.moveToElement(move).build().perform();
+		//moves to specific element
+		a.moveToElement(driver.findElement(By.cssSelector("a[id='nav-link-accountList']"))).build().perform();
+
 	}
 }
