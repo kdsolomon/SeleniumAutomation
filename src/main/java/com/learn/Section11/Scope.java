@@ -32,7 +32,7 @@ public class Scope {
 			
 			String clickOnLink=Keys.chord(Keys.CONTROL,Keys.ENTER);
 			columndriver.findElements(By.tagName("a")).get(i).sendKeys(clickOnLink);
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			
 		}Set<String> ab= driver.getWindowHandles();
 		Iterator<String> it =ab.iterator();
@@ -40,12 +40,7 @@ public class Scope {
 				driver.switchTo().window(it.next());
 				System.out.println(driver.getTitle());
 			}
-			
-			
-			
-		
-		
-
+			driver.quit();
 	}
 
 }
