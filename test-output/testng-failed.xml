@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.learn.Section8.base">
+      <class name="com.learn.section14.Test">
         <methods>
-          <include name="test1"/>
+          <include name="streamFilter"/>
         </methods>
-      </class> <!-- com.learn.Section8.base -->
+      </class> <!-- com.learn.section14.Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
