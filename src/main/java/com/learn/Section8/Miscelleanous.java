@@ -37,7 +37,7 @@ public class Miscelleanous {
 			driver.get("http://google.com");
 			
 			File src=	 ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(src,new File("C:\\Users\\ksolomon\\images\\screenshot.png"));
+			FileUtils.copyFile(src,new File("C:\\Users\\ksolomon\\images\\Testscreenshot.png"));
 		
 		
 	}
